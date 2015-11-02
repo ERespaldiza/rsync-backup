@@ -1,9 +1,10 @@
 # rsync-backup.py
-*Incremental Backups with rsync*
+##Incremental Backups with rsync##
 Wraps rsync to make incremental backups. Intended to be used with cron
 and ssh RSA automatic login.
 
-*Usage:* python rsync-backup.py SRC DEST [--prefix] [OPTIONS]
+###Usage:
+`python rsync-backup.py SRC DEST [--prefix] [OPTIONS]`
 
 The script uses:
 
@@ -15,6 +16,8 @@ The script uses:
 3. The rest of rsync options specified are bypassed to rsync. E.g. you can
    use --dry-run to performe a trial run with no changes.
 
-Examples:
-$ python rsync-backup.py ~/Downloads ~/backups/rs/MyDownloads
-$ python rsync-backup.py user1@.example.com:/home/user/webapps/ /home/user1/backups/rs/webapps/ --log-file=/home/user1/backups/rs/webapps_rsb.log
+###Examples:
+
+`python rsync-backup.py ~/Downloads ~/backups/rs/MyDownloads`
+
+`python rsync-backup.py user1@.example.com:/home/user/webapps/ /home/user1/backups/rs/webapps/ --log-file=/home/user1/backups/rs/webapps_rsb.log`
